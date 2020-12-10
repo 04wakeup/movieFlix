@@ -1,5 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from "react";
+import GlobalStyles from "./GlobalStyles";
 import Router from "./Router";
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <>
         <Router />
+        <GlobalStyles />
       </>
     );
   }
