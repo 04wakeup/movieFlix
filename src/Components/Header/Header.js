@@ -1,9 +1,9 @@
 import React from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
 // here, it doesn't use Link tag, so doesn't need BrowserRouter!!!
 export default () => (
-  <header className="nav">
-    <ul>
+  <header>
+    <ul className={styles.navList}>
       <li>
         <a href="/">Movies</a>
       </li>
