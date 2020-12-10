@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-d
 import Home from "../Routes/Home";
 import TV from "../Routes/TV";
 import Search from "../Routes/Search";
+import Headers from "./Header";
 
 export default () => (
   <Router>
+    <Headers />
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/search" component={Search} />
