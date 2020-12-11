@@ -35,11 +35,12 @@ const SLink = styled(Link)`
 `; // bcs, it is pre-built-in
 // here, it doesn't use Link tag, so doesn't need BrowserRouter!!!
 // {location: {pathname}} = props
+
+// decide current li is selected then apply css
 export default withRouter((
   { location: { pathname } } //
 ) => (
   <Header>
-    {console.log(pathname)}
     <List>
       <Item current={pathname === "/"}>
         <SLink to="/">Movies</SLink>
