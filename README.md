@@ -12,6 +12,9 @@
 
 - [ ] Now Playing (Movie)
 - [ ] Upcoming (Moive)
-- [ ] Top Rated (TV, Movie)
+- [ ] Top Rated (TV)
 - [ ] Popular (TV, Movie)
 - [ ] Airing Today(TV)
+- [ ] TV Show Detail
+- [ ] Movie Detail
+- [ ] Search (Movie, TV)
