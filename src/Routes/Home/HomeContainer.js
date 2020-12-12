@@ -27,7 +27,6 @@ export default class extends React.Component {
       const {
         data: { results: popular },
       } = await moivesApi.popular();
-      throw Error();
       // eslint-disable-next-line no-unreachable
       this.setState({
         nowPlaying,
@@ -49,6 +48,7 @@ export default class extends React.Component {
 
   render() {
     // redner 1 first.
+
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
     return <HomePresenter nowPlaying={nowPlaying} upcoming={upcoming} popular={popular} error={error} loading={loading} />;
   }
