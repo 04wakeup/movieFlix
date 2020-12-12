@@ -1,9 +1,14 @@
 import axios from "axios";
+import dotenv from "dotenv";
+// hide important info
+dotenv.config();
 
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
   params: {
-    api_key: "2cec562af39ff4d7ab89e1d58532bdbb",
+    // eslint-disable-next-line no-undef
+    // eslint-disable-next-line spaced-comment
+    api_key: "2cec562af39ff4d7ab89e1d58532bdbb", //process.env.REACT_APP_API_KEY,
     language: "en-US",
   },
 });
