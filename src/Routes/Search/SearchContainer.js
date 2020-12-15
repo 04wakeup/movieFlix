@@ -1,3 +1,4 @@
+/* eslint-disable lines-between-class-members */
 /* eslint-disable max-len */
 /* eslint-disable react/state-in-constructor */
 // eslint-disable-next-line import/no-unresolved
@@ -15,13 +16,23 @@ export default class extends React.Component {
   };
 
   // check term is null
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    // prevent refresh which reset the state
+    event.preventDefault();
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
   };
 
+  updateTerm = (event) => {
+    const {
+      target: { value },
+    } = event;
+    this.setState({
+      searchTerm: value,
+    });
+  };
   // search by term for TV shows, Movies
   searchByTerm = async () => {
     const { searchTerm } = this.state;
@@ -44,6 +55,6 @@ export default class extends React.Component {
 
   render() {
     const { movieResults, tvResults, searchTerm, loading, error } = this.state;
-    return <SearchPresenter movieResults={movieResults} tvResults={tvResults} searchTerm={searchTerm} loading={loading} error={error} handleSubmit={this.handleSubmit} />;
+    return <SearchPresenter movieResults={movieResults} tvResults={tvResults} searchTerm={searchTerm} loading={loading} error={error} handleSubmit={this.handleSubmit} updateTerm={this.updateTerm} />;
   }
 }
