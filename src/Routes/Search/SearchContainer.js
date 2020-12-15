@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 /* eslint-disable lines-between-class-members */
 /* eslint-disable max-len */
 /* eslint-disable react/state-in-constructor */
@@ -55,6 +56,7 @@ export default class extends React.Component {
 
   render() {
     const { movieResults, tvResults, searchTerm, loading, error } = this.state;
+    // if the results are not found, but  movieResults, tvResults have meta info in js Object
     return <SearchPresenter movieResults={movieResults} tvResults={tvResults} searchTerm={searchTerm} loading={loading} error={error} handleSubmit={this.handleSubmit} updateTerm={this.updateTerm} />;
   }
 }

@@ -27,6 +27,7 @@ export default class extends React.Component {
       const {
         data: { results: popular },
       } = await moivesApi.popular();
+
       // eslint-disable-next-line no-unreachable
       this.setState({
         nowPlaying,

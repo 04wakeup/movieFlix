@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 /* eslint-disable max-len */
 /* eslint-disable react/state-in-constructor */
 // eslint-disable-next-line import/no-unresolved

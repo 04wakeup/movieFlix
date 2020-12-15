@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/forbid-prop-types */
@@ -9,6 +10,7 @@ import styled from "styled-components";
 import Section from "Components/Section";
 // eslint-disable-next-line import/no-unresolved
 import Loader from "Components/Loader";
+import Message from "Components/Message";
 
 const Container = styled.div`
   font-size: 10px;
@@ -42,6 +44,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
           ))}
         </Section>
       )}
+      {error && <Message text={error} color="#e74c3c" />}
     </Container>
   );
 
