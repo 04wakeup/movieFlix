@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  background-image: url(${(props) => (props.bgUrl ? props.bgUrl : require("../assets/test.png"))});
+  background-image: url(${(props) => props.bgUrl});
   height: 180px;
   background-image: cover;
   border-radius: 2px;
