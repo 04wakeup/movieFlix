@@ -28,6 +28,11 @@ const Rating = styled.span`
   right: 5px;
   opacity: 0;
   transition: opacity 0.1s linear;
+  span {
+    &:first-child {
+      letter-spacing: -3px;
+    }
+  }
 `;
 const ImageContainer = styled.div`
   position: relative;
@@ -59,7 +64,11 @@ const Poster = ({ id, imgUrl, title, rating, year, isMovie = false }) => (
         <Image bgUrl={imgUrl ? `https://image.tmdb.org/t/p/w300${imgUrl}` : noImage} />
         <Rating>
           <span role="img" aria-label="rating">
-            ⭐
+            {parseInt(rating, 10) > 0 ? `⭐` : null}
+            {parseInt(rating, 10) > 2 ? `⭐` : null}
+            {parseInt(rating, 10) > 4 ? `⭐` : null}
+            {parseInt(rating, 10) > 6 ? `⭐` : null}
+            {parseInt(rating, 10) > 8 ? `⭐` : null}
           </span>{" "}
           {rating}/10
         </Rating>
