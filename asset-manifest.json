@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/movieFlix/static/js/main.ebfb4e90.chunk.js",
-    "main.js.map": "/movieFlix/static/js/main.ebfb4e90.chunk.js.map",
+    "main.js": "/movieFlix/static/js/main.ddb533b7.chunk.js",
+    "main.js.map": "/movieFlix/static/js/main.ddb533b7.chunk.js.map",
     "runtime-main.js": "/movieFlix/static/js/runtime-main.068c3b13.js",
     "runtime-main.js.map": "/movieFlix/static/js/runtime-main.068c3b13.js.map",
-    "static/js/2.d2470ae1.chunk.js": "/movieFlix/static/js/2.d2470ae1.chunk.js",
-    "static/js/2.d2470ae1.chunk.js.map": "/movieFlix/static/js/2.d2470ae1.chunk.js.map",
+    "static/js/2.5e7ea294.chunk.js": "/movieFlix/static/js/2.5e7ea294.chunk.js",
+    "static/js/2.5e7ea294.chunk.js.map": "/movieFlix/static/js/2.5e7ea294.chunk.js.map",
     "index.html": "/movieFlix/index.html",
-    "static/js/2.d2470ae1.chunk.js.LICENSE.txt": "/movieFlix/static/js/2.d2470ae1.chunk.js.LICENSE.txt",
+    "static/js/2.5e7ea294.chunk.js.LICENSE.txt": "/movieFlix/static/js/2.5e7ea294.chunk.js.LICENSE.txt",
     "static/media/noPosterSmall.ea2ad102.png": "/movieFlix/static/media/noPosterSmall.ea2ad102.png"
   },
   "entrypoints": [
     "static/js/runtime-main.068c3b13.js",
-    "static/js/2.d2470ae1.chunk.js",
-    "static/js/main.ebfb4e90.chunk.js"
+    "static/js/2.5e7ea294.chunk.js",
+    "static/js/main.ddb533b7.chunk.js"
   ]
 }
