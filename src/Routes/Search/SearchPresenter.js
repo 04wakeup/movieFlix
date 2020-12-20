@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/jsx-wrap-multilines */
 /* eslint-disable react/require-default-props */
@@ -7,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Message from "Components/Message";
@@ -26,43 +28,50 @@ const Input = styled.input`
 
 // 1. at the beginning, it's nothing but for connecting to SearchContainer to cath the changement, MVC
 const SearchPresenter = ({ movieResults, tvResults, loading, error, searchTerm, handleSubmit, updateTerm }) => (
-  <Container>
-    <Form onSubmit={handleSubmit}>
-      <Input placeholder="Search Movies or TV Shows..." value={searchTerm} onChange={updateTerm} />
-    </Form>
-    {loading ? (
-      <Loader />
-    ) : (
-      <>
-        {movieResults && movieResults.length > 0 && (
-          <Section title="Movie Results">
-            {movieResults.map((movie) => (
-              <Poster
-                key={movie.id}
-                id={movie.id}
-                title={movie.original_title}
-                imgUrl={movie.poster_path}
-                rating={movie.vote_average}
-                year={movie.release_date && movie.release_date.split("-")[0]}
-                // eslint-disable-next-line react/jsx-boolean-value
-                isMovie={true}
-              />
-            ))}
-          </Section>
+  <>
+    <Helmet>
+      <title>Search | Netflix</title>
+    </Helmet>
+    {
+      <Container>
+        <Form onSubmit={handleSubmit}>
+          <Input placeholder="Search Movies or TV Shows..." value={searchTerm} onChange={updateTerm} />
+        </Form>
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            {movieResults && movieResults.length > 0 && (
+              <Section title="Movie Results">
+                {movieResults.map((movie) => (
+                  <Poster
+                    key={movie.id}
+                    id={movie.id}
+                    title={movie.original_title}
+                    imgUrl={movie.poster_path}
+                    rating={movie.vote_average}
+                    year={movie.release_date && movie.release_date.split("-")[0]}
+                    // eslint-disable-next-line react/jsx-boolean-value
+                    isMovie={true}
+                  />
+                ))}
+              </Section>
+            )}
+            {tvResults && tvResults.length > 0 && (
+              <Section title="TV Show Results">
+                {tvResults.map((show) => (
+                  <Poster key={show.id} id={show.id} title={show.original_name} imgUrl={show.poster_path} rating={show.vote_average} year={show.first_air_date && show.first_air_date.split("-")[0]} />
+                ))}
+              </Section>
+            )}
+          </>
         )}
-        {tvResults && tvResults.length > 0 && (
-          <Section title="TV Show Results">
-            {tvResults.map((show) => (
-              <Poster key={show.id} id={show.id} title={show.original_name} imgUrl={show.poster_path} rating={show.vote_average} year={show.first_air_date && show.first_air_date.split("-")[0]} />
-            ))}
-          </Section>
-        )}
-      </>
-    )}
-    {error && <Message text={error} color="#e74c3c" />}
+        {error && <Message text={error} color="#e74c3c" />}
 
-    {tvResults && movieResults && tvResults.length === 0 && movieResults.length === 0 && <Message text="Nothing Found" color="gray" />}
-  </Container>
+        {tvResults && movieResults && tvResults.length === 0 && movieResults.length === 0 && <Message text="Nothing Found" color="gray" />}
+      </Container>
+    }
+  </>
 );
 
 // Constraint Check
