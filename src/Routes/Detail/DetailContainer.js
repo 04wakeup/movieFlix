@@ -43,6 +43,7 @@ export default class extends React.Component {
         ({ data: result } = await moivesApi.movieDetail(parseId));
       } else {
         ({ data: result } = await moivesApi.showDetail(parseId));
+        console.log("tv");
       }
       console.log("result----", result);
     } catch {
