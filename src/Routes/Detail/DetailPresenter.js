@@ -8,6 +8,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
+import noImage from "../../Components/assets/noPosterSmall.png"; // this is faster than using  null ? a : b
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -52,9 +53,9 @@ const DetailPresenter = ({ result, loading, error }) =>
     <Loader />
   ) : (
     <Container>
-      <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`} />
+      <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.poster_path}`} />
       <Content>
-        <Cover bgImage={result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : "noPosterSmall.png"} />
+        <Cover bgImage={result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : noImage} />
       </Content>
     </Container>
   );

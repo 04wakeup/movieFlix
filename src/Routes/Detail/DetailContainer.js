@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable react/state-in-constructor */
-import { moivesApi } from "api";
+import { moivesApi, tvApi } from "api";
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
 
@@ -42,10 +42,8 @@ export default class extends React.Component {
       if (isMovie) {
         ({ data: result } = await moivesApi.movieDetail(parseId));
       } else {
-        ({ data: result } = await moivesApi.showDetail(parseId));
-        console.log("tv");
+        ({ data: result } = await tvApi.showDetail(parseId));
       }
-      console.log("result----", result);
     } catch {
       this.setState({ error: "Can't find anything." });
     } finally {

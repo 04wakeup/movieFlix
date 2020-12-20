@@ -1,3 +1,4 @@
+/* eslint-disable import/no-absolute-path */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
 /* eslint-disable max-len */
@@ -7,6 +8,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // import noImage from "./assets/noPosterSmall.png";
+import noImage from "./assets/noPosterSmall.png";
 
 const Container = styled.div`
   font-size: 12px;
@@ -53,8 +55,8 @@ const Poster = ({ id, imgUrl, title, rating, year, isMovie = false }) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
-        <Image bgUrl={imgUrl ? `https://image.tmdb.org/t/p/w300${imgUrl}` : "noPosterSmall.png"} />
-        {/* <Image bgUrl={imgUrl ? `https://image.tmdb.org/t/p/w300${imgUrl}` : noImage} /> */}
+        {/* <Image bgUrl={imgUrl ? `https://image.tmdb.org/t/p/w300${imgUrl}` : "noPosterSmall.png"} /> */}
+        <Image bgUrl={imgUrl ? `https://image.tmdb.org/t/p/w300${imgUrl}` : noImage} />
         <Rating>
           <span role="img" aria-label="rating">
             ⭐
