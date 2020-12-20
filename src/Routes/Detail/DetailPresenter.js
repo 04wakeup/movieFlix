@@ -90,7 +90,7 @@ const DetailPresenter = ({ result, loading, error }) =>
       <Helmet>
         <title>{result.original_title || result.original_name} | Netflix</title>
       </Helmet>
-      <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.poster_path}`} />
+      <Backdrop bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path || result.poster_path}`} />
       <Content>
         <Cover bgImage={result.poster_path ? `https://image.tmdb.org/t/p/original${result.poster_path}` : noImage} />
         <Data>
@@ -98,10 +98,7 @@ const DetailPresenter = ({ result, loading, error }) =>
           <ItemContainer>
             <Item>{result.release_date ? result.release_date.substring(0, 4) : result.first_air_date.substring(0, 4)}</Item>
             <Divider>▪</Divider>
-            <Item>
-              {result.runtime || result.episode_run_time[0]}
-              min
-            </Item>
+            <Item>{result.runtime === 0 || result.runtime ? result.runtime : result.episode_run_time[0]} min</Item>
             <Divider>▪</Divider>
             <Item>{result.genres && result.genres.map((genre, index) => (index === result.genres.length - 1 ? genre.name : `${genre.name} / `))}</Item>
             <Divider>▪</Divider>
