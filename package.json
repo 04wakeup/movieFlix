@@ -30,7 +30,7 @@
     "deploy":"gh-pages -d build",
     "predeploy":"npm run build"
   },
-  "homepage": "https://04wakeup.github.io/movieFlix",
+  "homepage": "https://boring-dubinsky-55f77d.netlify.app/",   
   "eslintConfig": {
     "extends": [
       "react-app",
