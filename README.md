@@ -5,7 +5,9 @@ This is a clone site of Netflix displaying movies, TV shows and searched ones. I
 
 ## Technology Stack
 * **Front-End**: ReactJS, JavaScript(ES6), Axios
-
+* **Workflow**
+  ![Workflow](./resources/Workflow.PNG)
+  *[Workflow]*
 ## Results
 This is a informative SPA (Single Page Application) by using React Router, Styled Component. [DEMO](https://04wakeup.github.io/movieFlix/#/) is available along with the link.
 
