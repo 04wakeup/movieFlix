@@ -1,20 +1,18 @@
-# Netflix Clone
+# Netflix
 
- Using React and ES6 by building a Movie Discovery App.
+## Overview
+This is a clone site of Netflix displaying movies, TV shows and searched ones. I created it using ReactJS and ES6 with movie API. I could practice ReactJS components to make it easy on implementing and understanding. By using movie API, this site can provide the newest information for TV shows and movies in Canada. Handling JSON data via API and Component are very efficient to process the meta data. 
 
- ## Screens
-- [ ] Home
-- [ ] TV Shows
-- [ ] Search
-- [ ] Detail
+## Technology Stack
+* **Front-End**: ReactJS, JavaScript(ES6), Axios
 
-## API Verbs
+## Results
+This is a informative SPA (Single Page Application) by using React Router, Styled Component. [DEMO](https://04wakeup.github.io/movieFlix/#/) is available along with the link.
 
-- [ ] Now Playing (Movie)
-- [ ] Upcoming (Moive)
-- [ ] Top Rated (TV)
-- [ ] Popular (TV, Movie)
-- [ ] Airing Today(TV)
-- [ ] TV Show Detail
-- [ ] Movie Detail
-- [ ] Search (Movie, TV)
+ ## Features
+ * **Home**: Now Playing, Upcoming
+ * **TV Shows**: Top Rated, Popular, Airing Today
+ * **Search**: keyword
+ * **Detail**: Rating with synopsis
+
+> Reference: [NOMAD CODERS](https://en.nomadcoders.co/)
